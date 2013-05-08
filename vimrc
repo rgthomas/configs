@@ -12,6 +12,7 @@ set laststatus=2
 set ruler
 set scrolloff=15
 set whichwrap+=<,>,h,l,[,]
+set backspace=indent,eol,start
 syntax on
 
 se t_Co=256
