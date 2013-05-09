@@ -2,5 +2,9 @@ export PATH=$HOME/development/bin:$PATH
 export PS1="\h > "
 export EDITOR=vim
 
-test -r /usr/sw/bin/init.sh && . /usr/sw/bin/init.sh
+set completion-ignore-case on
+set completion-map-case on
+set show-all-if-ambiguous on
+
+bind '"\C-f": menu-complete'
 
