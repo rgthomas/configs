@@ -22,6 +22,6 @@ if has("gui_running")
     set lines=60 columns=120
 endif
 
-" se t_Co=256
+se t_Co=256
 set background=dark
 colorscheme solarized
