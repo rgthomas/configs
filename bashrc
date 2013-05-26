@@ -1,10 +1,6 @@
-export PATH=$HOME/development/bin:$PATH
-export PS1="\h > "
+export PATH=/usr/local/bin:$PATH:$HOME/development/bin:.
+export PS1="\u@\h > "
 export EDITOR=vim
-
-set completion-ignore-case on
-set completion-map-case on
-set show-all-if-ambiguous on
 
 bind '"\C-f": menu-complete'
 
