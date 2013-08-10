@@ -1,10 +1,21 @@
-execute pathogen#infect()
+set nocompatible
+
+filetype off
+
+set rtp+=~/vimfiles/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'kien/ctrlp.vim'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'nanotech/jellybeans.vim'
+
+filetype plugin indent on
 
 set autoindent
 set expandtab
 set shiftwidth=4
 set softtabstop=4
-filetype plugin indent on
 
 set showmatch
 set hlsearch
@@ -24,4 +35,5 @@ endif
 
 se t_Co=256
 set background=dark
-colorscheme solarized
+colorscheme jellybeans
+
