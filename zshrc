@@ -2,7 +2,7 @@ export PATH=/usr/local/bin:$PATH:$HOME/development/bin
 export PS1="%n@%m > "
 export EDITOR=vim
 
-setopt autocd autopushd \ pushdignoredups
+setopt autocd autopushd pushdignoredups
 
 # The following lines were added by compinstall
 
