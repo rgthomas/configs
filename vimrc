@@ -33,6 +33,13 @@ if has("gui_running")
     set lines=60 columns=120
 endif
 
+" set fonts for gui versions
+if has("gui_macvim")
+    set guifont=Menlo
+elseif has("gui_running")
+    set guifont=Consolas
+endif
+
 se t_Co=256
 set background=dark
 colorscheme jellybeans
