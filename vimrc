@@ -2,7 +2,11 @@ set nocompatible
 
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+if has("unix")
+    set rtp+=~/.vim/bundle/vundle/
+elseif has("win32") || has("win64")
+    set rtp+=~/vimfiles/bundle/vundle/
+endif
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
@@ -28,19 +32,15 @@ set whichwrap+=<,>,h,l,[,]
 set backspace=indent,eol,start
 syntax on
 
-" starting window size for gvim
-if has("gui_running")
-    set lines=60 columns=120
-endif
-
-" set fonts for gui versions
-if has("gui_macvim")
-    set guifont=Menlo
-elseif has("gui_running")
-    set guifont=Consolas
-endif
-
 se t_Co=256
 set background=dark
 colorscheme jellybeans
+
+" settings for gui versions
+if has("gui_macvim")
+    set guifont=Menlo:h14
+elseif has("gui_running")
+    set guifont=Consolas:h10
+    set lines=60 columns=120
+endif
 
