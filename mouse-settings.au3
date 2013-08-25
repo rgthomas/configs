@@ -10,6 +10,11 @@
 
 Run("control.exe main.cpl")
 WinWaitActive("Mouse Properties")
-Send("{tab}{tab}{tab}{tab}{tab}{right}{right}{right}{tab}{tab}")
+
+; Move to 'Wheel' tab
+Send("+{tab}{right 3}")
+Send("{tab 2}")
 Send("5")
+
 Send("{enter}")
+
