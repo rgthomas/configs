@@ -76,3 +76,7 @@ set showmode
 set ttyfast
 
 
+" leader commands
+let mapleader=","d
+nnoremap <leader><space> :noh<cr>
+
