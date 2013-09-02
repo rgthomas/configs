@@ -1,5 +1,6 @@
 set nocompatible
 
+" vundle setup
 filetype off
 
 if has("unix")
@@ -16,31 +17,57 @@ Bundle 'nanotech/jellybeans.vim'
 
 filetype plugin indent on
 
-set autoindent
+
+" indentation & syntax
 set expandtab
 set shiftwidth=4
 set softtabstop=4
 
-set showmatch
-set hlsearch
-set incsearch
-set number
-set laststatus=2
-set ruler
-set scrolloff=15
-set whichwrap+=<,>,h,l,[,]
-set backspace=indent,eol,start
+set autoindent
 syntax on
 
+
+" color settings
 se t_Co=256
 set background=dark
 colorscheme jellybeans
 
-" settings for gui versions
+
+" gui settings
 if has("gui_macvim")
     set guifont=Menlo:h14
 elseif has("gui_running")
     set guifont=Consolas:h10
     set lines=60 columns=120
 endif
+
+" searching and moving
+set backspace=indent,eol,start
+set gdefault
+set hlsearch
+set ignorecase
+set incsearch
+set smartcase
+set whichwrap+=<,>,h,l,[,]
+
+" turn off vim's regex chars
+nnoremap / /\v
+vnoremap / /\v
+" use tab to match bracket pairs
+nnoremap <tab> %
+vnoremap <tab> %
+
+
+" other settings
+set colorcolumn=120
+set cursorline
+set laststatus=2
+set number
+set relativenumber
+set ruler
+set scrolloff=15
+set showcmd
+set showmatch
+set showmode
+set ttyfast
 
