@@ -22,7 +22,6 @@ filetype plugin indent on
 set expandtab
 set shiftwidth=4
 set softtabstop=4
-
 set autoindent
 syntax on
 
@@ -58,6 +57,11 @@ nnoremap <tab> %
 vnoremap <tab> %
 
 
+" remapped keys for convenience
+nnoremap ; :
+inoremap fj <esc>
+
+
 " other settings
 set colorcolumn=120
 set cursorline
@@ -70,4 +74,5 @@ set showcmd
 set showmatch
 set showmode
 set ttyfast
+
 
