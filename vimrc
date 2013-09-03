@@ -37,7 +37,7 @@ if has("gui_macvim")
     set guifont=Menlo:h14
 elseif has("gui_running")
     set guifont=Consolas:h10
-    set lines=60 columns=120
+    set lines=65 columns=130
 endif
 
 
