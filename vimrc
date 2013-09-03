@@ -40,6 +40,7 @@ elseif has("gui_running")
     set lines=60 columns=120
 endif
 
+
 " searching and moving
 set backspace=indent,eol,start
 set gdefault
@@ -79,8 +80,8 @@ set ttyfast
 " leader commands
 let mapleader=" "
 nnoremap <leader><space> :noh<cr>
-nnoremap <leader>a O/*<cr><cr><bs>/<cr><esc>k^x78Pkk78pja<space>
-nnoremap <leader>s O/*!<cr><cr><bs>/<up><space>
-nnoremap <leader>d A<space>//!<<space>
+nnoremap <leader>q O/*<cr><cr><bs>/<cr><esc>k^x78Pkk78pja<space>
+nnoremap <leader>w O/*!<cr><cr><bs>/<up><space>
+nnoremap <leader>e A<space>//!<<space>
 
 
