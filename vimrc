@@ -12,6 +12,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
 
@@ -83,5 +84,6 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <leader>q O/*<cr><cr><bs>/<cr><esc>k^x78Pkk78pja<space>
 nnoremap <leader>w O/*!<cr><cr><bs>/<up><space>
 nnoremap <leader>e A<space>//!<<space>
+
 
 
