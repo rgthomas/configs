@@ -12,6 +12,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
 
@@ -53,9 +54,15 @@ set whichwrap+=<,>,h,l,[,]
 " turn off vim's regex chars
 nnoremap / /\v
 vnoremap / /\v
+
 " use tab to match bracket pairs
 nnoremap <tab> %
 vnoremap <tab> %
+
+" tab navigation
+nnoremap <c-tab> :tabn<cr>
+nnoremap <c-s-tab> :tabp<cr>
+nnoremap <c-t> :tabnew<cr>
 
 
 " remapped keys for convenience
@@ -75,6 +82,11 @@ set showcmd
 set showmatch
 set showmode
 set ttyfast
+
+:au FocusLost * :set number
+:au FocusGained * :set relativenumber
+:autocmd InsertEnter * :set number
+:autocmd InsertLeave * :set relativenumber
 
 
 " leader commands
