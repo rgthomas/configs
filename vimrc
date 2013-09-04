@@ -54,9 +54,15 @@ set whichwrap+=<,>,h,l,[,]
 " turn off vim's regex chars
 nnoremap / /\v
 vnoremap / /\v
+
 " use tab to match bracket pairs
 nnoremap <tab> %
 vnoremap <tab> %
+
+" tab navigation
+nnoremap <c-tab> :tabn<cr>
+nnoremap <c-s-tab> :tabp<cr>
+nnoremap <c-t> :tabnew<cr>
 
 
 " remapped keys for convenience
@@ -89,6 +95,5 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <leader>q O/*<cr><cr><bs>/<cr><esc>k^x78Pkk78pja<space>
 nnoremap <leader>w O/*!<cr><cr><bs>/<up><space>
 nnoremap <leader>e A<space>//!<<space>
-
 
 
