@@ -99,7 +99,9 @@ nnoremap <leader>e A<space>//!<<space>
 
 
 " CtrlP
-nnoremap <leader>p :CtrlP<cr>
+let g:ctrlp_working_path_mode='r'
+let g:ctrlp_root_markers=['.ctrlp']
+nnoremap <leader>p :CtrlPMixed<cr>
 
 
 " NERDTree
