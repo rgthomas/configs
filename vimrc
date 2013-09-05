@@ -59,11 +59,6 @@ vnoremap / /\v
 nnoremap <tab> %
 vnoremap <tab> %
 
-" tab navigation
-nnoremap <c-tab> :tabn<cr>
-nnoremap <c-s-tab> :tabp<cr>
-nnoremap <c-t> :tabnew<cr>
-
 
 " remapped keys for convenience
 nnoremap ; :
@@ -92,8 +87,21 @@ set ttyfast
 " leader commands
 let mapleader=" "
 nnoremap <leader><space> :noh<cr>
+nnoremap <leader>v :source $MYVIMRC<cr>
+
+nnoremap <leader>t :tabnew<cr>
+nnoremap <leader>d :tabp<cr>
+nnoremap <leader>f :tabn<cr>
+
 nnoremap <leader>q O/*<cr><cr><bs>/<cr><esc>k^x78Pkk78pja<space>
 nnoremap <leader>w O/*!<cr><cr><bs>/<up><space>
 nnoremap <leader>e A<space>//!<<space>
 
+nnoremap <leader>p :CtrlP<cr>
+nnoremap <leader>a :NERDTreeToggle<cr>
+nnoremap <leader>s :NERDTreeFind<cr>
+
+
+" NERDTree options
+let NERDTreeQuitOnOpen=1
 
