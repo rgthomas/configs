@@ -97,11 +97,13 @@ nnoremap <leader>q O/*<cr><cr><bs>/<cr><esc>k^x78Pkk78pja<space>
 nnoremap <leader>w O/*!<cr><cr><bs>/<up><space>
 nnoremap <leader>e A<space>//!<<space>
 
+
+" CtrlP
 nnoremap <leader>p :CtrlP<cr>
+
+
+" NERDTree
+let NERDTreeQuitOnOpen=1
 nnoremap <leader>a :NERDTreeToggle<cr>
 nnoremap <leader>s :NERDTreeFind<cr>
-
-
-" NERDTree options
-let NERDTreeQuitOnOpen=1
 
