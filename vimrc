@@ -98,11 +98,29 @@ nnoremap <leader>w O/*!<cr><cr><bs>/<up><space>
 nnoremap <leader>e A<space>//!<<space>
 
 
+" wildignore
+set wildignore+=*.git,*.svn,*.o,*.lib,*.pyd
+if has('unix')
+    set wildignore+=*.a,*.dylib,*.dSYM,*.DS_Store
+elseif has('win32') || has('win64')
+    set wildignore+=*.dll,*.suo,*.sdf
+endif
+
+
 " CtrlP
 let g:ctrlp_working_path_mode='r'
 let g:ctrlp_root_markers=['.ctrlp']
+if has('unix')
+    let g:ctrlp_custom_ignore={
+        \ 'dir':    'build'
+        \ }
+elseif has('win32') || has('win64')
+    let g:ctrlp_custom_ignore={
+        \ 'dir':    'build'
+        \ 'files':  '\v*\.(exe)$'
+        \ }
+endif
 nnoremap <leader>p :CtrlPMixed<cr>
-
 
 " NERDTree
 let NERDTreeQuitOnOpen=1
