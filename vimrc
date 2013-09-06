@@ -105,7 +105,7 @@ nnoremap <leader>f :tabn<cr>
 
 nnoremap <leader>1 O/*<cr><cr><bs>/<cr><esc>k^x78Pkk78pja<space>
 nnoremap <leader>2 O/*!<cr><cr><bs>/<up><space>
-nnoremap <leader>3 A<space>//!<<space>
+nnoremap <leader>3 A<tab>//!<<space>
 
 
 " wildignore
