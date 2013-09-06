@@ -21,8 +21,9 @@ filetype plugin indent on
 
 " indentation & syntax
 set expandtab
-set shiftwidth=4
+set tabstop=4
 set softtabstop=4
+set shiftwidth=4
 set autoindent
 syntax on
 
@@ -93,9 +94,9 @@ nnoremap <leader>t :tabnew<cr>
 nnoremap <leader>d :tabp<cr>
 nnoremap <leader>f :tabn<cr>
 
-nnoremap <leader>q O/*<cr><cr><bs>/<cr><esc>k^x78Pkk78pja<space>
-nnoremap <leader>w O/*!<cr><cr><bs>/<up><space>
-nnoremap <leader>e A<space>//!<<space>
+nnoremap <leader>1 O/*<cr><cr><bs>/<cr><esc>k^x78Pkk78pja<space>
+nnoremap <leader>2 O/*!<cr><cr><bs>/<up><space>
+nnoremap <leader>3 A<space>//!<<space>
 
 
 " wildignore
@@ -116,7 +117,7 @@ if has('unix')
         \ }
 elseif has('win32') || has('win64')
     let g:ctrlp_custom_ignore={
-        \ 'dir':    'build'
+        \ 'dir':    'build',
         \ 'files':  '\v*\.(exe)$'
         \ }
 endif
