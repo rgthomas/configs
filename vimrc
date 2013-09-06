@@ -28,6 +28,15 @@ set autoindent
 syntax on
 
 
+" Avalanche specific
+autocmd BufRead,BufNewFile *.fp,*.vp,*.cp
+    \ setlocal syntax=c |
+    \ setlocal noexpandtab
+autocmd FileType c,cpp setlocal noexpandtab
+nnoremap <leader>e :!p4 edit %:p<cr>
+nnoremap <leader>r :!p4 revert %:p<cr>
+
+
 " color settings
 se t_Co=256
 set background=dark
