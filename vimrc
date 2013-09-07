@@ -26,6 +26,7 @@ set softtabstop=4
 set shiftwidth=4
 set autoindent
 syntax on
+set cinoptions=:0,g0,N-s
 
 
 " color settings
