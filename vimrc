@@ -33,8 +33,8 @@ autocmd BufRead,BufNewFile *.fp,*.vp,*.cp
     \ setlocal syntax=c |
     \ setlocal noexpandtab
 autocmd FileType c,cpp setlocal noexpandtab
-nnoremap <leader>e :!p4 edit %:p<cr>
-nnoremap <leader>r :!p4 revert %:p<cr>
+nnoremap <leader>c :!p4 edit %:p<cr>
+nnoremap <leader>x :!p4 diff %:p<cr>
 
 
 " color settings
