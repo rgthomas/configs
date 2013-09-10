@@ -13,6 +13,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-fugitive'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
 
@@ -128,4 +129,9 @@ nnoremap <leader>p :CtrlPMixed<cr>
 let NERDTreeQuitOnOpen=1
 nnoremap <leader>a :NERDTreeToggle<cr>
 nnoremap <leader>s :NERDTreeFind<cr>
+
+" fugitive
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gD :diffoff<cr>
+
 
