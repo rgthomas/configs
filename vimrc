@@ -26,16 +26,6 @@ set softtabstop=4
 set shiftwidth=4
 set autoindent
 syntax on
-set cinoptions=:0,g0,N-s
-
-
-" Avalanche specific
-autocmd BufRead,BufNewFile *.fp,*.vp,*.cp
-    \ setlocal syntax=c |
-    \ setlocal noexpandtab
-autocmd FileType c,cpp setlocal noexpandtab
-nnoremap <leader>c :!p4 edit %:p<cr>
-nnoremap <leader>x :!p4 diff %:p<cr>
 
 
 " color settings
@@ -104,8 +94,8 @@ nnoremap <leader>t :tabnew<cr>
 nnoremap <leader>d :tabp<cr>
 nnoremap <leader>f :tabn<cr>
 
-nnoremap <leader>1 O/*!<cr>\file<tab><cr>\author<tab><cr>\brief<tab><cr>/<cr><esc>kkkkA<space>
-nnoremap <leader>2 O/*!<cr><cr>/<up><space>
+nnoremap <leader>1 O/*<cr><cr><bs>/<cr><esc>k^x78Pkk78pja<space>
+nnoremap <leader>2 O/*!<cr><cr><bs>/<up><space>
 nnoremap <leader>3 A<tab>//!<<space>
 
 
@@ -137,4 +127,14 @@ nnoremap <leader>p :CtrlPMixed<cr>
 let NERDTreeQuitOnOpen=1
 nnoremap <leader>a :NERDTreeToggle<cr>
 nnoremap <leader>s :NERDTreeFind<cr>
+
+
+" Avalanche specific
+autocmd BufRead,BufNewFile *.fp,*.vp,*.cp
+    \ setlocal syntax=c |
+    \ setlocal noexpandtab
+autocmd FileType c,cpp setlocal noexpandtab
+nnoremap <leader>c :!p4 edit %:p<cr>
+nnoremap <leader>x :!p4 diff %:p<cr>
+
 
