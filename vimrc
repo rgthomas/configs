@@ -53,6 +53,10 @@ set ignorecase
 set incsearch
 set smartcase
 set whichwrap+=<,>,h,l,[,]
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
 
 " turn off vim's regex chars
 nnoremap / /\v
