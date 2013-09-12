@@ -13,6 +13,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-fugitive'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
 
@@ -51,6 +52,10 @@ set ignorecase
 set incsearch
 set smartcase
 set whichwrap+=<,>,h,l,[,]
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
 
 " turn off vim's regex chars
 nnoremap / /\v
@@ -128,6 +133,10 @@ let NERDTreeQuitOnOpen=1
 nnoremap <leader>a :NERDTreeToggle<cr>
 nnoremap <leader>s :NERDTreeFind<cr>
 
+" fugitive
+nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gD :diffoff<cr>
+
 
 " Avalanche specific
 autocmd BufRead,BufNewFile *.fp,*.vp,*.cp
@@ -136,5 +145,4 @@ autocmd BufRead,BufNewFile *.fp,*.vp,*.cp
 autocmd FileType c,cpp setlocal noexpandtab
 nnoremap <leader>c :!p4 edit %:p<cr>
 nnoremap <leader>x :!p4 diff %:p<cr>
-
 
