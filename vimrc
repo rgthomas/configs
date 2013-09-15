@@ -100,7 +100,7 @@ nnoremap <leader>t :tabnew<cr>
 nnoremap <leader>d :tabp<cr>
 nnoremap <leader>f :tabn<cr>
 
-nnoremap <leader>1 O/*!<cr>\file<tab><cr>\author<tab><cr>\brief<tab><cr>/<cr><esc>kkkkA<space>
+nnoremap <leader>1 O/*!<cr>\file<tab><cr>\author<tab><cr>\brief<tab><cr>/<cr><esc>kkkkA
 nnoremap <leader>2 O/*!<cr><cr>/<up><space>
 nnoremap <leader>3 A<tab>//!<<space>
 
