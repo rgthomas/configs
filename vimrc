@@ -94,7 +94,7 @@ set ttyfast
 " leader commands
 let mapleader=" "
 nnoremap <leader><space> :noh<cr>
-nnoremap <leader>v :source $MYVIMRC<cr>
+nnoremap <leader>V :source $MYVIMRC<cr>
 
 nnoremap <leader>t :tabnew<cr>
 nnoremap <leader>d :tabp<cr>
