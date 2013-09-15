@@ -10,12 +10,12 @@ elseif has("win32") || has("win64")
 endif
 call vundle#rc()
 
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
+Bundle 'nanotech/jellybeans.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'nanotech/jellybeans.vim'
 
 filetype plugin indent on
 
@@ -34,15 +34,6 @@ set cinoptions=:0,g0,N-s
 se t_Co=256
 set background=dark
 colorscheme jellybeans
-
-
-" gui settings
-if has("gui_macvim")
-    set guifont=Menlo:h14
-elseif has("gui_running")
-    set guifont=Consolas:h10
-    set lines=65 columns=130
-endif
 
 
 " searching and moving
@@ -114,16 +105,25 @@ elseif has('win32') || has('win64')
 endif
 
 
+" GUI settings
+if has("gui_macvim")
+    set guifont=Menlo:h14
+elseif has("gui_running")
+    set guifont=Consolas:h10
+    set lines=65 columns=130
+endif
+
+
 " CtrlP
 let g:ctrlp_working_path_mode='r'
 let g:ctrlp_root_markers=['.ctrlp']
 if has('unix')
     let g:ctrlp_custom_ignore={
-        \ 'dir':    'build'
+        \ 'dir':    '\v[\/](build|doc)$'
         \ }
 elseif has('win32') || has('win64')
     let g:ctrlp_custom_ignore={
-        \ 'dir':    'build',
+        \ 'dir':    '\v[\/](build|doc)$',
         \ 'files':  '\v*\.(exe)$'
         \ }
 endif
