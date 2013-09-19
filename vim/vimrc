@@ -2,21 +2,13 @@ set nocompatible
 
 " vundle setup
 filetype off
-
 if has("unix")
     set rtp+=~/.vim/bundle/vundle/
 elseif has("win32") || has("win64")
     set rtp+=~/vimfiles/bundle/vundle/
 endif
 call vundle#rc()
-
-Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-fugitive'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'nanotech/jellybeans.vim'
-
+source ~/.vundle-packages
 filetype plugin indent on
 
 
@@ -27,22 +19,6 @@ set softtabstop=4
 set shiftwidth=4
 set autoindent
 syntax on
-
-
-" color settings
-se t_Co=256
-set background=dark
-colorscheme jellybeans
-
-
-" gui settings
-if has("gui_macvim")
-    set guifont=Menlo:h14
-elseif has("gui_running")
-    set guifont=Consolas:h10
-    set lines=65 columns=130
-endif
-
 
 " searching and moving
 set backspace=indent,eol,start
@@ -61,15 +37,11 @@ nnoremap <c-l> <c-w>l
 nnoremap / /\v
 vnoremap / /\v
 
-" use tab to match bracket pairs
-nnoremap <tab> %
-vnoremap <tab> %
-
-
 " remapped keys for convenience
 nnoremap ; :
 inoremap fj <esc>
-
+nnoremap <tab> %
+vnoremap <tab> %
 
 " other settings
 set colorcolumn=120
@@ -84,25 +56,24 @@ set showmatch
 set showmode
 set ttyfast
 
+" change line number based on focus & insert mode
 :au FocusLost * :set number
 :au FocusGained * :set relativenumber
 :autocmd InsertEnter * :set number
 :autocmd InsertLeave * :set relativenumber
 
-
 " leader commands
 let mapleader=" "
 nnoremap <leader><space> :noh<cr>
-nnoremap <leader>v :source $MYVIMRC<cr>
+nnoremap <leader>V :source $MYVIMRC<cr>
 
 nnoremap <leader>t :tabnew<cr>
 nnoremap <leader>d :tabp<cr>
 nnoremap <leader>f :tabn<cr>
 
-nnoremap <leader>1 O/*<cr><cr><bs>/<cr><esc>k^x78Pkk78pja<space>
-nnoremap <leader>2 O/*!<cr><cr><bs>/<up><space>
+nnoremap <leader>1 O/*!<cr>\file<tab><cr>\author<tab><cr>\brief<tab><cr>/<cr><esc>kkkkA
+nnoremap <leader>2 O/*!<cr><cr>/<up><space>
 nnoremap <leader>3 A<tab>//!<<space>
-
 
 " wildignore
 set wildignore+=*.git,*.svn,*.o,*.lib,*.pyd
@@ -113,16 +84,30 @@ elseif has('win32') || has('win64')
 endif
 
 
+" color settings
+se t_Co=256
+set background=dark
+colorscheme jellybeans
+
+" GUI settings
+if has("gui_macvim")
+    set guifont=Menlo:h14
+elseif has("gui_running")
+    set guifont=Consolas:h10
+    set lines=65 columns=130
+endif
+
+
 " CtrlP
 let g:ctrlp_working_path_mode='r'
 let g:ctrlp_root_markers=['.ctrlp']
 if has('unix')
     let g:ctrlp_custom_ignore={
-        \ 'dir':    'build'
+        \ 'dir':    '\v[\/](build|doc)$'
         \ }
 elseif has('win32') || has('win64')
     let g:ctrlp_custom_ignore={
-        \ 'dir':    'build',
+        \ 'dir':    '\v[\/](build|doc)$',
         \ 'files':  '\v*\.(exe)$'
         \ }
 endif

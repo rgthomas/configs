@@ -1,0 +1,7 @@
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'gmarik/vundle'
+Bundle 'kien/ctrlp.vim'
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-fugitive'
+
