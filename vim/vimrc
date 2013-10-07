@@ -65,7 +65,7 @@ set ttyfast
 " leader commands
 let mapleader=" "
 nnoremap <leader><space> :noh<cr>
-nnoremap <leader>V :source $MYVIMRC<cr>
+nnoremap <leader>v :source $MYVIMRC<cr>
 
 nnoremap <leader>t :tabnew<cr>
 nnoremap <leader>d :tabp<cr>
@@ -99,6 +99,9 @@ endif
 
 
 " CtrlP
+let g:ctrlp_map='<leader>p'
+let g:ctrlp_cmd='CtrlPMixed'
+let g:ctrlp_max_files=100000
 let g:ctrlp_working_path_mode='r'
 let g:ctrlp_root_markers=['.ctrlp']
 if has('unix')
@@ -111,7 +114,6 @@ elseif has('win32') || has('win64')
         \ 'files':  '\v*\.(exe)$'
         \ }
 endif
-nnoremap <leader>p :CtrlPMixed<cr>
 
 " NERDTree
 let NERDTreeQuitOnOpen=1
