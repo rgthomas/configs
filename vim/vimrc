@@ -102,6 +102,7 @@ endif
 " CtrlP
 let g:ctrlp_map='<leader>p'
 let g:ctrlp_cmd='CtrlPMixed'
+let g:ctrlp_max_files=100000
 let g:ctrlp_working_path_mode='r'
 let g:ctrlp_root_markers=['.ctrlp']
 if has('unix')
