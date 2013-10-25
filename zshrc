@@ -3,6 +3,7 @@ export PS1="%n@%m > "
 export EDITOR=vim
 
 setopt autocd autopushd pushdignoredups
+bindkey -e
 
 # The following lines were added by compinstall
 
