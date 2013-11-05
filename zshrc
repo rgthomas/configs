@@ -1,6 +1,18 @@
-export PATH=/usr/local/bin:$PATH:$HOME/development/bin:.
+# OS-specific settings
+if [[ -n $CSIDL_WINDOWS ]]
+then
+    echo "[zshrc] initializing for Windows..."
+    export $PATH:.
+    export EDITOR=gvim
+else
+    echo "[zshrc] initializing for OSX/Linux..."
+    export PATH=/usr/local/bin:$PATH:$HOME/development/bin:.
+    export EDITOR=mvim
+    export GIT_EDITOR='mvim -f'
+fi
+
+# OS-independent settings
 export PS1="%n@%m > "
-export EDITOR=vim
 
 setopt autocd autopushd pushdignoredups
 bindkey -e
