@@ -1,8 +1,8 @@
 # OS-specific settings
-if [[ -n $CSIDL_WINDOWS ]]
+if [[ -n $WINDIR ]]
 then
     echo "[zshrc] initializing for Windows..."
-    export $PATH:.
+    export PATH=$PATH:$HOME/development/bin:.
     export EDITOR=gvim
 else
     echo "[zshrc] initializing for OSX/Linux..."
