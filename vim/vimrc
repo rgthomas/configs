@@ -39,7 +39,6 @@ nnoremap / /\v
 vnoremap / /\v
 
 " remapped keys for convenience
-nnoremap ; :
 inoremap fj <esc>
 nnoremap <tab> %
 vnoremap <tab> %
