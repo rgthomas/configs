@@ -20,6 +20,12 @@ set shiftwidth=4
 set autoindent
 syntax on
 set cinoptions=:0,g0,N-s
+let g:syntastic_check_on_open=1
+
+" filetype settings
+au BufRead,BufNewFile *.vert set filetype=c
+au BufRead,BufNewFile *.frag set filetype=c
+au BufRead,BufNewFile *.glsl set filetype=c
 
 " searching and moving
 set backspace=indent,eol,start
