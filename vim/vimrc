@@ -20,6 +20,7 @@ set shiftwidth=4
 set autoindent
 syntax on
 set cinoptions=:0,g0,N-s
+let g:indent_guides_enable_on_vim_startup=1
 let g:syntastic_check_on_open=1
 
 " filetype settings
