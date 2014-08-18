@@ -1,0 +1,12 @@
+[color]
+	ui = true
+[user]
+	email = robertgthomas@gmail.com
+	name = Robert Thomas
+[push]
+	default = simple
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	sub = reset HEAD
