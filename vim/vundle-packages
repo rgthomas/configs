@@ -13,6 +13,8 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 
-" javascript plugins
+" language-specific plugins
 Bundle 'pangloss/vim-javascript'
 Bundle 'jelera/vim-javascript-syntax'
+Bundle 'tikhomirov/vim-glsl'
+
