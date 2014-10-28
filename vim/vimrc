@@ -24,9 +24,7 @@ let g:indent_guides_enable_on_vim_startup=1
 let g:syntastic_check_on_open=1
 
 " filetype settings
-"au BufRead,BufNewFile *.vert set filetype=c
-"au BufRead,BufNewFile *.frag set filetype=c
-"au BufRead,BufNewFile *.glsl set filetype=c
+autocmd FileType glsl set commentstring=//%s
 
 " searching and moving
 set backspace=indent,eol,start
