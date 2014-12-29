@@ -1,20 +1,24 @@
 Bundle 'gmarik/vundle'
 
-Bundle 'tpope/vim-fugitive'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'scrooloose/syntastic'
-
-" color schemes
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'nanotech/jellybeans.vim'
-
 " file system & buffer navigation
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
+
+" general syntax support
+Bundle 'tpope/vim-commentary'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'scrooloose/syntastic'
 
 " language-specific plugins
 Bundle 'pangloss/vim-javascript'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'tikhomirov/vim-glsl'
+
+" dev tool integration
+Bundle 'tpope/vim-fugitive'
+
+" color schemes
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'nanotech/jellybeans.vim'
 
