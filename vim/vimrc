@@ -123,4 +123,7 @@ nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gw :Gwrite<cr>
 nnoremap <leader>gs :Gstatus<cr>
 
+" You Complete Me
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+
 
