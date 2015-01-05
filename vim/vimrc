@@ -76,9 +76,9 @@ nnoremap <leader>3 A<tab>//!<<space>
 " wildignore
 set wildignore+=*.git,*.svn,*.o,*.lib,*.pyd
 if has('unix')
-    set wildignore+=*.a,*.dylib,*.dSYM,*.DS_Store
+    set wildignore+=*/tmp/*,*.a,*.dylib,*.dSYM,*.DS_Store
 elseif has('win32') || has('win64')
-    set wildignore+=*.dll,*.suo,*.sdf
+    set wildignore+=*\\tmp\\*,*.dll,*.suo,*.sdf
 endif
 
 
