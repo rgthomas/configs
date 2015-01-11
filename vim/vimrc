@@ -25,6 +25,7 @@ let g:syntastic_check_on_open=1
 
 " filetype settings
 autocmd FileType glsl set commentstring=//%s
+autocmd FileType cpp set commentstring=//%s
 
 " searching and moving
 set backspace=indent,eol,start
