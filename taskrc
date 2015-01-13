@@ -25,4 +25,10 @@ include /usr/local/share/doc/task/rc/dark-red-256.theme
 #include /usr/local/share/doc/task/rc/dark-yellow-green.theme
 #include /usr/local/share/doc/task/rc/dark-gray-256.theme
 
-default.command=long
+default.command=minimal
+
+report.minimal.sort=due+,project+
+report.minimal.filter=status:pending
+report.minimal.columns=id,project,description.count,due.countdown,depends.indicator
+report.minimal.labels=ID,Project,Description,Due,D
+
