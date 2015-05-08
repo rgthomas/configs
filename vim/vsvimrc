@@ -1,0 +1,38 @@
+set nocompatible
+
+" searching and moving
+set backspace=indent,eol,start
+set gdefault
+set hlsearch
+set ignorecase
+set incsearch
+set smartcase
+set whichwrap+=<,>,h,l,[,]
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
+" turn off vim's regex chars
+nnoremap / /\v
+vnoremap / /\v
+
+" remapped keys for convenience
+inoremap fj <esc>
+nnoremap <tab> %
+vnoremap <tab> %
+
+" other settings
+set laststatus=2
+set number
+set ruler
+set scrolloff=15
+set showcmd
+set showmatch
+set showmode
+set ttyfast
+
+" leader commands
+let mapleader=" "
+nnoremap <leader><space> :noh<cr>
+
