@@ -2,12 +2,7 @@ set nocompatible
 
 " vundle setup
 filetype off
-if has("unix")
-    set rtp+=~/.vim/bundle/Vundle.vim
-elseif has("win32") || has("win64")
-    set rtp+=~/vimfiles/bundle/Vundle.vim
-    let path='~/vimfiles/bundle'
-endif
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 source ~/.vundle-packages
 call vundle#end()
