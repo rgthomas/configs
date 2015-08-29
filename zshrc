@@ -17,10 +17,6 @@ export PS1="%n@%m > "
 setopt autocd autopushd pushdignoredups
 bindkey -e
 
-# NVM support
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _expand _complete _ignored

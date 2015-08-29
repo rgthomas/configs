@@ -2,13 +2,10 @@ set nocompatible
 
 " vundle setup
 filetype off
-if has("unix")
-    set rtp+=~/.vim/bundle/vundle/
-elseif has("win32") || has("win64")
-    set rtp+=~/vimfiles/bundle/vundle/
-endif
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 source ~/.vundle-packages
+call vundle#end()
 filetype plugin indent on
 
 
@@ -65,6 +62,7 @@ set ttyfast
 let mapleader=" "
 nnoremap <leader><space> :noh<cr>
 nnoremap <leader>v :source $MYVIMRC<cr>
+nnoremap <leader>q :bdelete<cr>
 
 nnoremap <leader>q :bdelete<cr>
 nnoremap <leader>t :tabnew<cr>
