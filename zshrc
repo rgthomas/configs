@@ -6,7 +6,8 @@ then
     export EDITOR=gvim
 else
     echo "[zshrc] initializing for OSX/Linux..."
-    export PATH=/usr/local/bin:$PATH:$HOME/development/bin:.
+    export PATH=/usr/local/bin:$PATH:/Developer/NVIDIA/CUDA-7.5/bin:$HOME/development/bin:.
+    export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/Developer/NVIDIA/CUDA-7.5/lib
     export EDITOR=mvim
     export GIT_EDITOR='mvim -f'
 fi
