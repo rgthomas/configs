@@ -10,3 +10,5 @@
 	co = checkout
 	ci = commit
 	sub = reset HEAD
+[core]
+	editor = vim
