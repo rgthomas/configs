@@ -9,4 +9,4 @@
 	st = status
 	co = checkout
 	ci = commit
-	sub = reset HEAD
+	sub = restore --staged
