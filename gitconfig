@@ -10,3 +10,5 @@
 	co = checkout
 	ci = commit
 	sub = restore --staged
+[core]
+	editor = vim
